@@ -23,6 +23,10 @@
     "url": "https://github.com/pletcher/principal-parts-bot/issues"
   },
   "homepage": "https://github.com/pletcher/principal-parts-bot#readme",
+  "engines": {
+    "node": "7.7.x",
+    "npm": "4.3.x"
+  },
   "dependencies": {
     "body-parser": "^1.17.0",
     "express": "^4.15.0"
