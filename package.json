@@ -1,0 +1,34 @@
+{
+  "name": "principal-parts-bot",
+  "version": "0.1.0",
+  "description": "A bot for retrieving lists of principal parts",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pletcher/principal-parts-bot.git"
+  },
+  "keywords": [
+    "greek",
+    "verbs",
+    "principal",
+    "parts"
+  ],
+  "author": "@pletcher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pletcher/principal-parts-bot/issues"
+  },
+  "homepage": "https://github.com/pletcher/principal-parts-bot#readme",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "express": "^4.15.0"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "standard": "^9.0.0"
+  }
+}
