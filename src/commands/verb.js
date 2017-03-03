@@ -1,5 +1,4 @@
-const VERBS = require('../../verbs.json')
-const VERB_KEYS = Object.keys(VERBS)
+const verbs = require('../../resources/verbs')
 
 const defaults = {
   response_type: 'in_channel'
@@ -19,7 +18,5 @@ const handler = (payload, res) => {
 module.exports = { handler, pattern: /verb/i }
 
 function randomVerb() {
-  return VERBS[
-    VERB_KEYS[Math.floor(Math.random() * VERB_KEYS.length)]
-  ]
+  return verbs[Math.floor(Math.random() * verbs.length)]
 }

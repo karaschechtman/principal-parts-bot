@@ -1,10 +1,10 @@
 const fs = require('fs')
 
-const VERBS = require('../../verbs.json')
+const verbs = require('../../resources/verbs')
 
-const verbCommands = Object.keys(VERBS).map(k => ({
-  handler: exactMatchHandler(VERBS[k]),
-  pattern: k
+const verbCommands = verbs.map(v => ({
+  handler: exactMatchHandler(v),
+  pattern: v[0]
 }))
 
 module.exports = fs.readdirSync(__dirname).reduce((cmds, file) => {
@@ -21,7 +21,7 @@ function exactMatchHandler(a) {
 
     res.status(200).json({
       response_type: 'in_channel',
-      text: a.join(' ')
+      text: a.join(',')
     })
   }
 }
