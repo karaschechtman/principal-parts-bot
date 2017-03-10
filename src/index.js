@@ -15,7 +15,7 @@ app.get('/', (req, res) => { res.send('hi!') })
 app.post('/commands', (req, res) => {
   const { body } = req
 
-  if (!body || body.token !== config('COMMAND_TOKEN')) {
+  if (!body || config('COMMAND_TOKENS').indexOf(body.token) === -1) {
     const err = 'Uh-oh. Something went wrong with that request. Is everything configured properly?'
 
     res.status(401).end(err)

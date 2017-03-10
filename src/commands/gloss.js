@@ -4,6 +4,8 @@ process.binding('http_parser').HTTPParser = require('http-parser-js').HTTPParser
 const cheerio = require('cheerio')
 const request = require('request-promise')
 
+const config = require('../config')
+
 const defaults = {
   response_type: 'in_channel'
 }
@@ -35,6 +37,6 @@ function getShortDef(search_term) {
     transform(body) {
       return cheerio.load(body)
     },
-    uri: process.env.GLOSS_URI
-  }).then($ => $(`#${process.env.GLOSS_DEF_ID}`).text())
+    uri: config('GLOSS_URI')
+  }).then($ => $(`#${config('GLOSS_DEF_ID')}`).text())
 }
