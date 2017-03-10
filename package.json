@@ -29,8 +29,12 @@
   },
   "dependencies": {
     "body-parser": "^1.17.0",
+    "cheerio": "^0.22.0",
     "dotenv": "^4.0.0",
-    "express": "^4.15.0"
+    "express": "^4.15.0",
+    "http-parser-js": "^0.4.4",
+    "request": "^2.81.0",
+    "request-promise": "^4.1.1"
   },
   "devDependencies": {
     "standard": "^9.0.0"
